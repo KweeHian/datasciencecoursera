@@ -25,7 +25,7 @@ features <- rbind(features_train,features_test)    	#Merge training and test set
 featureNme <- read.table("features.txt",header = FALSE)
 colnames(features) <- t(featureNme[2])			#Assign field Name
 
-tidyData <- cbind(features,activity,subject)   		# Data set combining test and training data in 1 data set
+tidyData <- cbind(features,activity,subject)   		# Data set combining features, activity and subject data in 1 data set
 
 # write.table(tidyData, "tidyData.txt",row.names = FALSE )	## tidayData output
 
