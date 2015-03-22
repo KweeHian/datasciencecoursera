@@ -1,7 +1,7 @@
 Variable Name               Type           Values
 ------------------------------------------------------------------------------------------------------------------
-Subject           Char                                                  1-30
-Activity          Char                                                 WALKING
+Subject                            Char                              1-30
+Activity                            Char                                WALKING
                                                                        WALKING_UPSTAIRS
                                                                        WALKING_DOWNSTAIRS
                                                                        SITTING
