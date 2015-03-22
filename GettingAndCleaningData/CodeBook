@@ -1,5 +1,5 @@
-Variable Name	                                  Type 	Values
----------------------------------------------------------------------
+Variable Name	 Type 	Values
+------------------------------------------------------------------------------------------------------------------
 Subject                                       	Char	1-30
 Activity                                      	Char	WALKING
                                                       WALKING_UPSTAIRS
@@ -7,13 +7,13 @@ Activity                                      	Char	WALKING
                                                       SITTING
                                                       STANDING
                                                       LAYING
-TimeBodyAccelerometerMean()-X                	  numeric	
+TimeBodyAccelerometerMean()-X                	 numeric	
 TimeBodyAccelerometerMean()-Y                 	numeric	
 TimeBodyAccelerometerMean()-Z                 	numeric	
-TimeBodyAccelerometerSTD()-X                 	  numeric	
+TimeBodyAccelerometerSTD()-X                 	numeric	
 TimeBodyAccelerometerSTD()-Y                  	numeric	
 TimeBodyAccelerometerSTD()-Z                  	numeric	
-TimeGravityAccelerometerMean()-X             	  numeric	
+TimeGravityAccelerometerMean()-X             	numeric	
 TimeGravityAccelerometerMean()-Y              	numeric	
 TimeGravityAccelerometerMean()-Z              	numeric	
 TimeGravityAccelerometerSTD()-X              	  numeric	
