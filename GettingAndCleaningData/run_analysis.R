@@ -27,7 +27,7 @@ colnames(features) <- t(featureNme[2])			#Assign field Name
 
 tidyData <- cbind(features,activity,subject)   		# Data set combining test and training data in 1 data set
 
-write.table(tidyData, "tidyData.txt",row.names = FALSE )	## tidayData output
+# write.table(tidyData, "tidyData.txt",row.names = FALSE )	## tidayData output
 
 # 2. Extracts only the measurements on the mean and standard deviation for each measurement.
 ###########################################################################################
