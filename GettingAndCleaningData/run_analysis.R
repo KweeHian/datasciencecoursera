@@ -25,9 +25,9 @@ features <- rbind(features_train,features_test)    	#Merge training and test set
 featureNme <- read.table("features.txt",header = FALSE)
 colnames(features) <- t(featureNme[2])			#Assign field Name
 
-tidyData <- cbind(features,activity,subject)   		#Final Data set combining test and training data in 1 data set
+tidyData <- cbind(features,activity,subject)   		# Data set combining test and training data in 1 data set
 
-write.table(tidyData, "tidyData.txt",row.names = FALSE )	##Final tidayData output
+write.table(tidyData, "tidyData.txt",row.names = FALSE )	## tidayData output
 
 # 2. Extracts only the measurements on the mean and standard deviation for each measurement.
 ###########################################################################################
@@ -35,7 +35,7 @@ write.table(tidyData, "tidyData.txt",row.names = FALSE )	##Final tidayData outpu
 reqdCol<- grep("-mean\\(\\)|-std\\(\\)", featureNme[, 2])   #get a listing of features with mean and sd
 features <- features[, reqdCol]
 
-tidyData <- cbind(features,activity,subject)   		# Final Dataset with only mean and sd features col 
+tidyData <- cbind(features,activity,subject)   		#  Dataset with only mean and sd features col 
 
 
 # 3. Uses descriptive activity names to name the activities in the data set.
@@ -65,14 +65,14 @@ names(tidyData)<-gsub("-freq()", "Frequency", names(tidyData), ignore.case = TRU
 names(tidyData)<-gsub("angle", "Angle", names(tidyData))
 names(tidyData)<-gsub("gravity", "Gravity", names(tidyData))
 
-write.table(tidyData, "tidyData.txt",row.names = FALSE )	## First tidayData output
+#write.table(tidyData, "tidyData.txt",row.names = FALSE )	##  tidayData output
 
 # 5. Creates a 2nd, independent tidy data set with the average of each variable for each activity and each subject.
 ####################################################################################################################
 
 tidyDataSubActAve <- aggregate(. ~Subject + Activity, tidyData, mean)
 tidyDataSubActAve <- tidyDataSubActAve[order(tidyDataSubActAve$Subject,tidyDataSubActAve$Activity),]
-#tidyDataSubActAve[,1:4]   			## Display data showing each subject, then by activity and the variable average
+#tidyDataSubActAve[,1:4]   	## Display data showing each subject, then by activity and the variable average
 
 write.table(tidyDataAve , "tidyData_of_averages.txt", row.names = FALSE )    ##Final tidayData Subject Activity Average output
 
