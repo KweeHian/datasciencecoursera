@@ -74,7 +74,7 @@ tidyDataSubActAve <- aggregate(. ~Subject + Activity, tidyData, mean)
 tidyDataSubActAve <- tidyDataSubActAve[order(tidyDataSubActAve$Subject,tidyDataSubActAve$Activity),]
 #tidyDataSubActAve[,1:4]   	## Display data showing each subject, then by activity and the variable average
 
-write.table(tidyDataAve , "tidyData_of_averages.txt", row.names = FALSE )    ##Final tidayData Subject Activity Average output
+write.table( tidyDataSubActAve, "tidyData_of_averages.txt", row.names = FALSE )    ##Final tidayData Subject Activity Average output
 
 
 ### ==== END OF PROJECT ================
